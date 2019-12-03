@@ -9,9 +9,9 @@ function Login() {
     const [senha, setSenha] = useState();
 
     function logar() {
-        firebase.auth().SignInWithEmailAndPassword(email,senha).then(resultado =>{
+        firebase.auth().signInWithEmailAndPassword(email,senha).then(resultado=>{
             alert('sucesso');
-        }).catch(erro =>{
+        }).catch(erro=>{
             alert('erro');
         })
     }
