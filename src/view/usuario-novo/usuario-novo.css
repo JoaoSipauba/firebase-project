@@ -13,3 +13,11 @@ body{
     background-color: #F21667;
     color: #FFF;
 }
+.opcoes-cadastro a{
+    text-decoration: none;
+    color: #FFF;
+    transition: .2s ease-in;
+}
+.opcoes-cadastro a:hover{
+    color: #F21667
+}
