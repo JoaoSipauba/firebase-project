@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import firebase from '../../config/firebase';
 import 'firebase/auth';
-import {Link} from 'react-router-dom';
 import NavBar from '../../components/navbar'
 
 
@@ -36,10 +35,6 @@ function NovoUsuario() {
                         carregando ? <div class="spinner-border text-danger" role="status"><span class="sr-only">Loading...</span></div>
                             : <button type='button' className='btn btn-lg btn-block mt-3 mb-5 btn-cadastro' onClick={cadastrar}>Cadastrar</button>
                     }
-
-                    <div className="opcoes-cadastro mt-5">
-                        <Link to='/' className="mx-2">Fazer login</Link>
-                    </div>
                 </form>
             </div>
         </>
