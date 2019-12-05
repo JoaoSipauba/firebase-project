@@ -7,6 +7,7 @@ import {Provider} from 'react-redux';
 import Login from './view/login';
 import NovoUsuario from './view/usuario-novo';
 import Home from './view/home';
+import RedefinirSenha from './view/redefinir-senha';
 
 function App() {
   return(
@@ -15,6 +16,7 @@ function App() {
         <Route exact path = '/' component={Home}/>
         <Route exact path = '/NovoUsuario' component={NovoUsuario}/>
         <Route exact path = '/Login' component={Login}/>
+        <Route exact path = '/RedefinirSenha' component={RedefinirSenha}/>
       </Router>
     </Provider>
   )
