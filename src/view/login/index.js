@@ -8,11 +8,15 @@ import 'firebase/auth';
 function Login() {
     const [email, setEmail] = useState();
     const [senha, setSenha] = useState();
+    const [carregando, setCarregando] = useState()
 
     function logar() {
+        setCarregando(1)
         firebase.auth().signInWithEmailAndPassword(email,senha).then(resultado=>{
+            setCarregando(0)
             alert('sucesso');
         }).catch(erro=>{
+            setCarregando(0)
             alert('erro');
         })
     }
@@ -26,10 +30,14 @@ function Login() {
                 <input onChange={(e)=> setEmail(e.target.value)} type="email" id="inputEmail" class="form-control my-2" placeholder="Email" />
                 <input onChange={(e)=> setSenha(e.target.value)} type="password" id="inputPassword" class="form-control my-2" placeholder="Senha" />
                 
-                <button class="btn btn-lg btn-block btn-login" type="button" onClick={logar}>Login</button>
+                
+                {
+                    carregando ? <div class="spinner-border text-danger" role="status"><span class="sr-only">Loading...</span></div>
+                    : <button class="btn btn-lg btn-block btn-login" type="button" onClick={logar}>Login</button>
+                }
                 
                 <div className="opcoes-login mt-5">
-                    <a href="#" className="mx-2">Recuperar senha</a>
+                    <Link to = '/' className="mx-2">Recuperar senha</Link>
                     <span className="text-white">&#9733;</span>
                     <Link to='NovoUsuario' className="mx-2">Quero cadastrar</Link>
                 </div>
