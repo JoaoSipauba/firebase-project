@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import firebase from '../../config/firebase';
-import 'firebase/auth'
+import 'firebase/auth';
+import {Link} from 'react-router-dom';
 
 import './usuario-novo.css'
 
@@ -33,7 +34,7 @@ function NovoUsuario() {
                 }
 
                 <div className="opcoes-cadastro mt-5">
-                    <a href="#" className="mx-2">Fazer login</a>
+                    <Link to='/' className="mx-2">Fazer login</Link>
                 </div>
             </form>
         </div>
