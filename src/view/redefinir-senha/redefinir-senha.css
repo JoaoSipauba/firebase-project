@@ -1,0 +1,12 @@
+.form-redefinir{
+    max-width: 600px;
+}
+
+.btn-enviar{
+    background-color: #614EA6;
+    color: #FFF;
+}
+.btn-enviar:hover{
+    background-color: #F21667;
+    color: #FFF;
+}

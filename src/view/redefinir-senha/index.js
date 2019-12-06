@@ -17,11 +17,11 @@ function RedefinirSenha() {
     return(
         <>
         <NavBar/>
-        <form className='text-center form-login mx-auto mt-5'>
+        <form className='text-center form-redefinir mx-auto mt-5'>
             <h1 className='h3 mb-3 text-black font-weight-bold'>Redefinir Senha</h1>
 
-            <input onChange={(e)=> setEmail(e.target.value)} type='email' className='form-control my-2' placeholder='email'></input>
-            <button type='button' className='btn btn-lg btn-block mt-5 mb-5 btn-cadastro' onClick={EnviarEmail}>Enviar</button>
+            <input onChange={(e)=> setEmail(e.target.value)} type='email' className='form-control my-5' placeholder='email'></input>
+            <button type='button' className='btn btn-lg btn-block mt-5 mb-5 btn-enviar' onClick={EnviarEmail}>Enviar</button>
         </form>
         </>
     )
