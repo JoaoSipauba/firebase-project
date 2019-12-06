@@ -94,7 +94,7 @@ function EventoCadastro() {
                         carregando > 0 ? <div className="spinner-border text-danger mx-auto" role="status"><span class="sr-only">Loading...</span></div>
                         :<button type='button' className='btn btn-lg btn-block mt-3 mb-5 btn-cadastro' onClick={Cadastrar}>Publicar evento</button>
                         }
-                        </div>
+                    </div>
                 </form>
             </div>
         </>
