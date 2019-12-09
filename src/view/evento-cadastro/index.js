@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import './evento-cadastro.css';
-import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import firebase from '../../config/firebase';
 import NavBar from '../../components/navbar';
-import { firestore } from 'firebase';
 
 function EventoCadastro() {
     const [carregando, setCarregando] = useState();
