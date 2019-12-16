@@ -36,7 +36,7 @@ function Login() {
                 <input onChange={(e)=> setEmail(e.target.value)} type="email" id="inputEmail" class="form-control my-2" placeholder="Email" />
                 <input onChange={(e)=> setSenha(e.target.value)} type="password" id="inputPassword" class="form-control my-2" placeholder="Senha" />
                 
-                <div className='row mt-3 mx-auto btn-block'>
+                <div className='row mt-3 mx-auto '>
                 {
                     carregando ? <div class="spinner-border text-danger btn-block mx-auto" role="status"><span class="sr-only">Loading...</span></div>
                     : <button class="btn btn-lg btn-block btn-login" type="button" onClick={logar}>Login</button>

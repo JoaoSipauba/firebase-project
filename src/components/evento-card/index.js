@@ -10,7 +10,7 @@ function EventoCard({id, img, titulo, detalhes, visualizacoes}) {
 
     useEffect(()=> {
         firebase.storage().ref(`imagens/${img}`).getDownloadURL().then(url => setUrlImg(url))
-    },[urlImg]);
+    });
     return(
         <div className='col-md-3 col-sm-12'>
             <img id='banner-evento' src={urlImg} className='card-img-top img-cartao' alt='Imagem do Evento'/>
@@ -21,7 +21,7 @@ function EventoCard({id, img, titulo, detalhes, visualizacoes}) {
 
                 <div className='row rodape-card d-flex align-items-center'>
                     <div className='col-6'>
-                        <Link to={'/eventodetalhes/' + id} className='btn btn-sm btn-detalhes'>+ detalhes</Link>
+                        <Link to={'/EventoDetalhes/' + id} className='btn btn-sm btn-detalhes'>+ detalhes</Link>
                     </div>
                 
                     <div className='col-6 text-right'>

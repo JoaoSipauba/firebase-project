@@ -29,7 +29,7 @@ function NavBar() {
                     :
                     <>
                         <li className="nav-item">
-                            <Link className="nav-link" to='EventoCadastro'>Publicar eventos</Link>
+                            <Link className="nav-link" to='/EventoCadastro'>Publicar eventos</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/eventos/meus">Meus eventos <span className="sr-only">(current)</span></Link>
