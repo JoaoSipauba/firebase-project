@@ -16,29 +16,35 @@ function EventoCadastro() {
     const usuarioEmail = useSelector(state => state.usuarioEmail);
 
     const storage = firebase.storage();
-    const db = firebase.firestore();
+    const db = firebase.database();
 
     function Cadastrar() {
         setCarregando(1);
-        storage.ref(`imagens/${foto.name}`).put(foto).then(() => {
-            db.collection('eventos').add({
-                titulo: titulo,
-                tipo: tipo,
-                detalhes: detalhes,
-                data: data,
-                hora: hora,
-                usuario: usuarioEmail,
-                visualizacoes: 0,
-                foto: foto.name,
-                publico: 1,
-                criacao: new Date()
-            }).then(() => {
-                alert('sucesso')
-                setCarregando(0)
-            }).catch(() => {
-                alert('Erro ao enviar')
-                setCarregando(0)
-            });
+        db.ref('eventos/').once('value').then(snapshot=>{
+            let obj = snapshot.val()
+            let id = Object.values(obj).length + 1
+            console.log(id);
+            storage.ref(`imagens/${id}`).put(foto)
+            storage.ref(`imagens/${foto.id}`).put(foto).then(() => {
+                db.ref('eventos').push({
+                    titulo: titulo,
+                    tipo: tipo,
+                    detalhes: detalhes,
+                    data ,
+                    hora: hora,
+                    usuario: usuarioEmail,
+                    visualizacoes: 0,
+                    foto: id,
+                    publico: 1,
+                    criacao: new Date()
+                }).then(() => {
+                    alert('sucesso')
+                    setCarregando(0)
+                }).catch(() => {
+                    alert('Erro ao enviar')
+                    setCarregando(0)
+                });
+            })
         })
     }
     return (
