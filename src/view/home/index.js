@@ -63,7 +63,43 @@ function Home({match}) {
             img={""} 
             titulo={"Doe paz!"} 
             detalhes={"Doe paz enquanto é tempo!"} 
-            visualizacoes={'2'} />    
+            visualizacoes={'2'} />  
+        <EventoCard key={5} 
+            id={5} 
+            img={""} 
+            titulo={"Doe paz!"} 
+            detalhes={"Doe paz enquanto é tempo!"} 
+            visualizacoes={'2'} />  
+        <EventoCard key={5} 
+            id={5} 
+            img={""} 
+            titulo={"Doe paz!"} 
+            detalhes={"Doe paz enquanto é tempo!"} 
+            visualizacoes={'2'} />  
+        <EventoCard key={5} 
+            id={5} 
+            img={""} 
+            titulo={"Doe paz!"} 
+            detalhes={"Doe paz enquanto é tempo!"} 
+            visualizacoes={'2'} />  
+        <EventoCard key={5} 
+            id={5} 
+            img={""} 
+            titulo={"Doe paz!"} 
+            detalhes={"Doe paz enquanto é tempo!"} 
+            visualizacoes={'2'} />  
+        <EventoCard key={5} 
+            id={5} 
+            img={""} 
+            titulo={"Doe paz!"} 
+            detalhes={"Doe paz enquanto é tempo!"} 
+            visualizacoes={'2'} />  
+        <EventoCard key={5} 
+            id={5} 
+            img={""} 
+            titulo={"Doe paz!"} 
+            detalhes={"Doe paz enquanto é tempo!"} 
+            visualizacoes={'2'} />  
         </div>
         </>
     )

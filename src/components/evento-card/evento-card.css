@@ -1,10 +1,14 @@
+h5 {
+    font-family: 'Poppins', sans-serif;
+  
+}
 #card{
     border-radius: 10px;
     transition: 0.3s ease-in-out;
     background-color: #fff;
 }
 #card:hover{
-    background-color: #614ea6;
+    background-color: #3670ff;
     color: #fff;
 }
 #card:hover .btn-detalhes{
@@ -14,15 +18,23 @@
 #card:hover .rodape-card{
     color: #fff;
 }
+#detalhes{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
 .rodape-card{
-    color: #614ea6;
+    color: #3670ff;
     height: 35px;
 }
-
+#div-btn{
+    padding: 0px;
+}
 .btn-detalhes{
-    background-color: #614ea6;
+    background-color: #3670ff;
     color: #fff;
     letter-spacing: 0.1px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
 }
 .btn-detalhes:hover{
     background-color: #f21667;
@@ -39,4 +51,6 @@
 .img-cartao{
     max-height: 200px;
     min-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }

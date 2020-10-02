@@ -32,7 +32,6 @@ function Login() {
         {useSelector(state => state.usuarioLogado) > 0 ? <Redirect to ='/'/>: null}
         <div className="login-content d-flex align-items-center">
             <form className="form-signin mx-auto">
-                <img className="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72" />
                 <h1 className="h3 mb-3 font-weight-normal text-center text-white font-weight-bold">Login</h1>
 
                 <input onChange={(e)=> setEmail(e.target.value)} type="email" id="inputEmail" class="form-control my-2" placeholder="Email" />

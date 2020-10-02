@@ -16,17 +16,17 @@ function EventoCard({id, img, titulo, detalhes, visualizacoes}) {
     });
     return(
         <div  className='col-md-3 col-sm-12 py-2'>
-            <div id="card">
+            <div id="card" className='p-1'>
 
-                <img id='banner-evento' src={urlImg} className='card-img-top img-cartao' alt='Imagem do Evento'/>
+                <img id='banner-evento' src={urlImg} className='card-img img-cartao' alt='Imagem do Evento'/>
 
                 <div className='card-body'>
                     <h5>{titulo}</h5>
-                    <p className='card-text text-justify'>{detalhes}</p>
+                    <p id='detalhes' className='card-text text-justify'>{detalhes}</p>
 
                     <div className='row rodape-card d-flex align-items-center'>
-                        <div className='col-6'>
-                            <Link to={'/EventoDetalhes/' + id} className='btn btn-sm btn-detalhes'>+ detalhes</Link>
+                        <div id='div-btn' className='col-6'>
+                            <Link to={'/EventoDetalhes/' + id} className='btn btn-sm btn-detalhes'>Detalhes</Link>
                         </div>
                     
                         <div className='col-6 text-right'>
