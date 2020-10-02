@@ -15,14 +15,16 @@ function Login() {
     const dispatch = useDispatch();
     
     function logar() {
-        setCarregando(1)
-        firebase.auth().signInWithEmailAndPassword(email,senha).then(resultado=>{
-            setCarregando(0)
-            dispatch({type:'LOG_IN', usuarioEmail:email})
-        }).catch(erro=>{
-            setCarregando(0)
-            alert('erro ao logar');
-        })
+        if (email && senha) {
+            setCarregando(1)
+            firebase.auth().signInWithEmailAndPassword(email,senha).then(resultado=>{
+                setCarregando(0)
+                dispatch({type:'LOG_IN', usuarioEmail:email})
+            }).catch(erro=>{
+                setCarregando(0)
+                alert('erro ao logar');
+            })
+        }
     }
 
     return (

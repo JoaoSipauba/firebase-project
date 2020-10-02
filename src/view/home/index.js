@@ -58,7 +58,12 @@ function Home({match}) {
 
         <div className='p-3 row'>
         {eventos.map(item => <EventoCard key={item.id} id={item.id} img={item.foto} titulo={item.titulo} detalhes={item.detalhes} visualizacoes={item.visualizacoes} />)}
-            
+        {/* <EventoCard key={5} 
+            id={5} 
+            img={""} 
+            titulo={"Doe paz!"} 
+            detalhes={"Doe paz enquanto é tempo!"} 
+            visualizacoes={'2'} />     */}
         </div>
         </>
     )

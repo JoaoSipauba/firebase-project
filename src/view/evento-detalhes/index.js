@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './evento-detalhes.css';
 import {Link} from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import firebase from '../../config/firebase';
 import NavBar from '../../components/navbar'
 
 
