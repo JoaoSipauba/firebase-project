@@ -15,7 +15,9 @@ function Home({match}) {
     useEffect(()=>{
         firebase.database().ref('eventos').on('value', resultado =>{
             let snapshot = resultado.val();
-            setEventos(Object.values(snapshot))
+            if (snapshot !== null || snapshot !== undefined) {
+                setEventos(Object.values(snapshot))
+            }              
         })
     },[])
 
@@ -29,13 +31,13 @@ function Home({match}) {
         </div>
 
         <div className='p-3 row'>
-        {eventos.map(item => <EventoCard key={item.id} id={item.id} img={item.foto} titulo={item.titulo} detalhes={item.detalhes} visualizacoes={item.visualizacoes} />)}
-        <EventoCard
+        {eventos.map((item, index) => <EventoCard key={index} id={item.foto} img={item.foto} titulo={item.titulo} detalhes={item.detalhes} visualizacoes={item.visualizacoes} />)}
+        {/* <EventoCard
             id={5} 
             img={""} 
             titulo={"Doe paz!"} 
             detalhes={"Doe paz enquanto é tempo!"} 
-            visualizacoes={'2'} />  
+            visualizacoes={'2'} />   */}
         </div>
         </>
     )

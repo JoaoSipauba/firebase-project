@@ -22,11 +22,14 @@ function EventoCadastro() {
         setCarregando(1);
         db.ref('eventos/').once('value').then(snapshot=>{
             let obj = snapshot.val()
-            let id = Object.values(obj).length + 1
+            let id = 1
+            if (obj !== null || obj !== undefined) {
+                id = Object.values(obj).length + 1
+            }
             console.log(id);
             storage.ref(`imagens/${id}`).put(foto)
             storage.ref(`imagens/${foto.id}`).put(foto).then(() => {
-                db.ref('eventos').push({
+                db.ref('eventos/').push({
                     titulo: titulo,
                     tipo: tipo,
                     detalhes: detalhes,

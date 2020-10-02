@@ -1,11 +1,13 @@
-h5 {
+body {
     font-family: 'Poppins', sans-serif;
-  
 }
 #card{
     border-radius: 10px;
     transition: 0.3s ease-in-out;
     background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 2px 0.5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 #card:hover{
     background-color: #3670ff;
@@ -47,10 +49,12 @@ h5 {
     max-height: 100px;
     overflow: hidden;
 }
-
 .img-cartao{
     max-height: 200px;
     min-width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+#view{
+    padding: 0 !important;
 }
