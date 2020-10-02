@@ -16,13 +16,11 @@ function App() {
     <Provider store={store}>
       <Router>
         <Route exact path = '/' component={Home}/>
-        <Route path = '/eventos/:parametro' component={Home}/>
         <Route exact path = '/NovoUsuario' component={NovoUsuario}/>
         <Route exact path = '/Login' component={Login}/>
         <Route exact path = '/RedefinirSenha' component={RedefinirSenha}/>
         <Route exact path = '/EventoCadastro' component={EventoCadastro}/>
-        <Route exact path = '/EventoDetalhes' component={EventoDetalhes}/>
-        <Route path = '/EventosDetalhes/:parametro' component = {EventoDetalhes}/>
+        <Route path = '/EventoDetalhes/:idEvento' component = {EventoDetalhes}/>
       </Router>
     </Provider>
   )
