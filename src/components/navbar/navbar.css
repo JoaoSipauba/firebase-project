@@ -1,5 +1,15 @@
+#logo{
+    font-family: 'Acme', sans-serif;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+#logo:hover{
+    color: #F21667 !important;
+}
 .navbar{
     background-color: #614EA6;
+    font-family: 'Poppins', sans-serif
 }
 
 .nav-item a{

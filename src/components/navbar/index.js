@@ -1,21 +1,24 @@
 import React from 'react';
 import './navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
 
 function NavBar() {
     const dispatch = useDispatch()
+    const history = useHistory()
+
+    function handleGoToHome(){
+        history.push('/')
+    }
     return (
+        <>
         <nav className="navbar navbar-expand-lg">
-            <span className="navbar-brand text-white">Eventos</span>
+            <span id="logo" className="navbar-brand text-white" onClick={handleGoToHome}>BlueEvents</span>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i className="fas fa-bars text-white"></i>            
             </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
+            <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul className="navbar-nav">
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
-                    </li>
                 {
                     useSelector(state => state.usuarioLogado) < 1 ?
                     <>
@@ -42,6 +45,7 @@ function NavBar() {
                 </ul>
             </div>
         </nav>
+        </>
     )
 }
 export default NavBar;
