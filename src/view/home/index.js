@@ -32,30 +32,12 @@ function Home({match}) {
 
         <div className='p-3 row'>
         {eventos.map((item, index) => <EventoCard key={index} id={item.foto} img={item.foto} titulo={item.titulo} detalhes={item.detalhes} visualizacoes={item.visualizacoes} />)}
-        <EventoCard
+        {/* <EventoCard
             id={5} 
             img={""} 
             titulo={"Doe paz!"} 
             detalhes={"Doe paz enquanto é tempo!"} 
-            visualizacoes={'2'} />  
-        <EventoCard
-            id={5} 
-            img={""} 
-            titulo={"Doe paz!"} 
-            detalhes={"Doe paz enquanto é tempo!"} 
-            visualizacoes={'2'} />  
-        <EventoCard
-            id={5} 
-            img={""} 
-            titulo={"Doe paz!"} 
-            detalhes={"Doe paz enquanto é tempo!"} 
-            visualizacoes={'2'} />  
-        <EventoCard
-            id={5} 
-            img={""} 
-            titulo={"Doe paz!"} 
-            detalhes={"Doe paz enquanto é tempo!"} 
-            visualizacoes={'2'} />  
+            visualizacoes={'2'} />   */}
         </div>
         </>
     )
