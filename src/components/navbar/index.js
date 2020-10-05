@@ -7,7 +7,10 @@ function NavBar() {
     const dispatch = useDispatch()
     const history = useHistory()
 
-    function handleGoToHome(){
+    function handleGoToHome(logout){
+        if (logout === true) {
+            dispatch({type:'LOG_OUT'})
+        }
         history.push('/')
     }
     return (
@@ -38,7 +41,7 @@ function NavBar() {
                             <Link className="nav-link" to="/eventos/meus">Meus eventos <span className="sr-only">(current)</span></Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" onClick={() => dispatch({type:'LOG_OUT'})}>Sair</Link>
+                            <Link className="nav-link" onClick={()=>handleGoToHome(true)}>Sair</Link>
                         </li>
                     </>
                 }

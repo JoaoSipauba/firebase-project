@@ -55,7 +55,7 @@ function EventoCadastro() {
             <NavBar />
             <div className='col-12 mt-5'>
                 <div className='row'>
-                    <h3 className='mx-auto font-weight-bold'>Novo evento</h3>
+                    <h3 className='mx-auto font-weight-bold mt-5'>Novo evento</h3>
                 </div>
 
                 <form>

@@ -43,10 +43,10 @@ function Login() {
                     : <button class="btn btn-lg btn-block btn-login" type="button" onClick={logar}>Login</button>
                 }
                 </div>
-                <div className="opcoes-login mt-3">
-                    <Link to = '/RedefinirSenha' className="mx-2">Recuperar senha</Link>
-                    <span className="text-white">&#9733;</span>
-                    <Link to='NovoUsuario' className="mx-2">Quero cadastrar</Link>
+                <div className="opcoes-login mt-3 d-flex justify-content-center">
+                    <Link to = '/RedefinirSenha' className="mx-1">Recuperar senha</Link>
+                    {/* <span className="text-white">&#9733;</span> */}
+                    <Link to='NovoUsuario' className="mx-1">Quero cadastrar</Link>
                 </div>
             </form>
         </div>
