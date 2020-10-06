@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './evento-cadastro.css';
 import { useSelector } from 'react-redux';
 
 import firebase from '../../config/firebase';
 import NavBar from '../../components/navbar';
+import { useHistory } from 'react-router-dom';
 
 function EventoCadastro() {
     const [carregando, setCarregando] = useState();
@@ -14,9 +15,17 @@ function EventoCadastro() {
     const [hora, setHora] = useState();
     const [foto, setFoto] = useState();
     const usuarioEmail = useSelector(state => state.usuarioEmail);
+    const isLogged = useSelector(state => state.usuarioLogado);
 
     const storage = firebase.storage();
     const db = firebase.database();
+    const history = useHistory();
+
+    useEffect(()=>{
+        if (isLogged !== 1){
+            history.push('/')
+        } 
+    },[history, isLogged])
 
     function Cadastrar() {
         setCarregando(1);
