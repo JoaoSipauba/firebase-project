@@ -1,6 +1,6 @@
 #logo{
-    font-family: 'Acme', sans-serif;
-    font-size: 1.5rem;
+    font-family: 'Lobster', cursive;
+    font-size: 1.6rem;
     cursor: pointer;
     transition: .2s ease-in;
 }
@@ -11,7 +11,12 @@
     background-color: #3670ff;
     font-family: 'Poppins', sans-serif;
 }
-
+#navbar-child{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .nav-item a{
     color: #FFF;
     transition: .2s ease-in;

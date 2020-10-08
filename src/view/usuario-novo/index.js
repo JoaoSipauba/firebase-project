@@ -19,6 +19,7 @@ function NovoUsuario() {
         }).catch(erro => {
             setCarregando(0)
             alert('algo deu errado')
+            console.log(erro)
         })
     }
     return (
